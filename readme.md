@@ -28,3 +28,16 @@ Search news given keyword
 * /search/Guardian/:keyword
 * /search/NYTimes/:keyword
 
+## Endpoints for iOS app
+Get 10 news from Guardian
+* /ios/home
+
+Get 10 news based on section
+* /ios/world
+* /ios/business
+* /ios/politics
+* /ios/sports
+* /ios/technology
+* /ios/science
+
+

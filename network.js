@@ -27,6 +27,8 @@ defaultGuardianImageURL = "https://assets.guim.co.uk/images/eada8aa27c12fe2d5afa
 
 defaultNYTImageURL = "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nytimes_hq.jpg"
 
+guardianURL_ios = `https://content.guardianapis.com/search?orderby=newest&show-fields=starRating,headline,thumbnail,short-url&api-key=${guardianAPIKey}`
+
 exports.guardianSearchURL = guardianSearchURL;
 exports.nytSearchURL = nytSearchURL;
 exports.guardianDetailURL = guardianDetailURL;
@@ -35,3 +37,4 @@ exports.guardianURL = guardianURL
 exports.nytURL = nytURL;
 exports.defaultGuardianImageURL = defaultGuardianImageURL;
 exports.defaultNYTImageURL = defaultNYTImageURL;
+exports.guardianURL_ios = guardianURL_ios;

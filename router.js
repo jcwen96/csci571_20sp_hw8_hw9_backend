@@ -1,4 +1,6 @@
 const handler = require("./handler");
+const handler_ios = require("./handler_ios");
+
 
 function route(app) {
 
@@ -53,6 +55,23 @@ function route(app) {
         next()
     }
   });
+
+  // MARK: for iOS
+  app.get("/ios/home", (req, res) => {
+    console.log(`INFO: ${req.method} from [${req.hostname}] for [${req.originalUrl}]`);
+    handler_ios.callGuardian(res)
+  });
+
+  app.get("/ios/:section", (req, res) => {
+    res.send("Section " + req.params.section)
+  });
+
+  app.get("/ios/article/:id");
+
+  app.get("ios/search/:keyword");
+
+  app.get("ios/trend");
+
   
   app.use((req, res, next) => {
     res.status(404).send("Sorry, no support for this API endpoint.")
